@@ -3,17 +3,17 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://dwkiner.github.io/CAIUKiosk/</loc>
+    <loc>https://caiukiosk.herokuapp.com/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://dwkiner.github.io/CAIUKiosk/categories/</loc>
+    <loc>https://caiukiosk.herokuapp.com/categories/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://dwkiner.github.io/CAIUKiosk/tags/</loc>
+    <loc>https://caiukiosk.herokuapp.com/tags/</loc>
     <priority>0</priority>
   </url>
   
