@@ -1,163 +1,80 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE HTML>
+<!--
+	Highlights by HTML5 UP
+	html5up.net | @n33co
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
 <html>
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!--
-        NOTE:
-        1. You can reference the file in SDK via relative path
-        2. The Control and Widget Should NOT share resources. Only the Widget folder will make it to the device
-        3. You may include any JS framework you want with your Widget and Control folders. However, keep in mind
-            to keep you plugin as light weight as possible for performance and transport reasons
-    -->
-    <!-- You can load helper.css to use our helper classes.
-    <link href="../../../../styles/helper.css" rel="stylesheet">
-    -->
-
-
-    <style>
-        @import url('https://fonts.googleapis.com/css?family=Nunito+Sans');
-
-        #bkg {
-            background: #8DD830;
-            background: -moz-linear-gradient(top, #8DD830 0%, #48691B 75%, #000000 100%);
-            background: -webkit-linear-gradient(top, #8DD830 0%, #48691B 75%, #000000 100%);
-            background: linear-gradient(to bottom, #8DD830 0%, #48691B 75%, #000000 100%);
-        }
-
-        .pulse-button {
-            position: relative;
-            top: 50%;
-            left: 50%;
-            margin-left: -50px;
-            margin-top: -50px;
-            display: block;
-            width: 100%;
-            height: auto;
-            font-size: 1.3em;
-            font-weight: light;
-            font-family: 'Trebuchet MS', sans-serif;
-            text-transform: uppercase;
-            text-align: center;
-            line-height: 100px;
-            letter-spacing: -1px;
-            color: white;
-            border: none;
-            border-radius: 50%;
-            background: #5a99d4;
-            cursor: pointer;
-            box-shadow: 0 0 0 0 rgba(90, 153, 212, 0.5);
-            -webkit-animation: pulse 1.5s infinite;
-        }
-
-            .pulse-button:hover {
-                -webkit-animation: none;
-            }
-
-        @-webkit-keyframes pulse {
-            0% {
-                -moz-transform: scale(0.9);
-                -ms-transform: scale(0.9);
-                -webkit-transform: scale(0.9);
-                transform: scale(0.9);
-            }
-
-            70% {
-                -moz-transform: scale(1);
-                -ms-transform: scale(1);
-                -webkit-transform: scale(1);
-                transform: scale(1);
-                box-shadow: 0 0 0 50px rgba(90, 153, 212, 0);
-            }
-
-            100% {
-                -moz-transform: scale(0.9);
-                -ms-transform: scale(0.9);
-                -webkit-transform: scale(0.9);
-                transform: scale(0.9);
-                box-shadow: 0 0 0 0 rgba(90, 153, 212, 0);
-            }
-        }
-
-        .page-container {
-            font-family: 'Nunito Sans', sans-serif;
-            font-size: 34px;
-            text-transform: none;
-            height: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            line-height: normal;
-        }
-
-        .namefrm {
-            font-size: 25px;
-        }
-    </style>
-    <!-- JS -->
-    <script src="../../../scripts/buildfire.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="../../../../scripts/jquery/jquery-1.11.2.min.js"></script>
-    <script src="/socket.io/socket.io.js"></script>
-    <script>
-        var socket = io.connect("https://dwkiner.api.stdlib.com/caiukiosk-app@dev/");
-        socket.on('sales', function (data) {
-            //Update your dashboard gauge
-            salesGauge.setValue(data.value);
-
-            socket.emit('profit', { my: 'data' });
-        });
-    </script>
-    <script>
-
-        function Help() {
-            var x = document.getElementById("button");
-            var nameInput = document.getElementById("nameIn").value
-            if (nameInput == "") {
-                nameInput = "Someone"
-            }
-            var xhr = new XMLHttpRequest();
-            if (x.style.display === "none") {
-                x.style.display = "block";
-            } else {
-                x.style.display = "none";
-            }
-
-            xhr.open("POST", "https://maker.ifttt.com/trigger/callHelp/with/key/ZB_WQg5fBbfqAIZAZIxdE3cA8JGkS04XwBoC0ya97d?value1=" + nameInput, true);
-            xhr.setRequestHeader("Content-type", "application/json");
-            var data = JSON.stringify({ "value1": nameInput });
-
-            xhr.send(data);
-            document.getElementById("response").innerHTML = "Someone will be with you shortly";
+    <title>CAIU KIOSK</title>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="description" content=" Your Description ">
+<meta name="author" content=" Dalton Kiner ">
+<meta name="generator" content="Hugo 0.53" />
+<!-- [if lte IE 8 ]]> <script src="https://dwkiner.github.io/CAIUKiosk/js/ie/html5shiv.js"></script><![endif] -->
+<link rel="stylesheet" href="https://dwkiner.github.io/CAIUKiosk/css/main.css" />
+<!--[if lte IE 8]><link rel="stylesheet" href="https://dwkiner.github.io/CAIUKiosk/css/ie8.css" /><![endif]-->
+<!--[if lte IE 8]><link rel="stylesheet" href="https://dwkiner.github.io/CAIUKiosk/css/ie9.css" /><![endif]-->
 
 
-
-
-
-        };
-    </script>
-    <!-- -->
-    <!--
-    <script src="../../../../scripts/angular/angular.min.js"></script>
-    <script src="../../../../scripts/angular/ui-bootstrap.min.js"></script>
-
-
-    -->
+    <script src="https://dwkiner.github.io/CAIUKiosk/js/webhook.js"></script>
 </head>
-<body id="bkg">
-    <div class="page-container">
+	<body>
+		
+		<!-- header -->
+<section id="header">
+  <header class="major 1">
+    <h1> Welcome to the Helpdesk </h1>
+    <p> Tap below to Start </p>
+  </header>
+  <div class="container">
+    <ul class="actions">
+      
+        <li><input type="button" href="#infos" class="button special scrolly" onclick="Help()" value="Call for Help"></li>
+        <li><a class="button special scrolly" href="https://daltonkiner.typeform.com/to/Ahux9D" data-mode="drawer_left" style="display:inline-block;" data-hide-headers=true data-hide-footer=true data-submit-close-delay="5" target="_blank">Submit a Ticket </a>
+        <script>(function () { var qs, js, q, s, d = document, gi = d.getElementById, ce = d.createElement, gt = d.getElementsByTagName, id = "typef_orm_share", b = "https://embed.typeform.com/"; if (!gi.call(d, id)) { js = ce.call(d, "script"); js.id = id; js.src = b + "embed.js"; q = gt.call(d, "script")[0]; q.parentNode.insertBefore(js, q) } })()</script></li>
+      
+    </ul>
+  </div>
+</section>
 
-        <div id="button">
-            <div class="namefrm">
-                <p>Please Enter your name:</p><p><input type="text" name="uName" value="" id="nameIn"></p>
-                <p><input type="image" src="/Images/helpbutton.png" alt="" onclick="Help()" /></p>
-
-            </div>
-        </div>
-
-        <div id="response" class=" pulse-button">
-        </div>
+		
+			
+			
+			
+				<!-- infos -->
+<section id="infos" class="main special">
+  <div class="container">
+    
+      <span class="image fit primary"><img src="images/pic03.jpg" alt="" /></span>
+    
+    <div class="content">
+      <header class="major">
+        <h2>Greetings!</h2>
+      </header>
+      <p>Our helpdesk hours are Monday through Friday, 7:30AM to 4:15PM. You may contact us via e-mail (helpdesk@caiu.org) or phone (717-732-8403) if you have any additional questions.</p>
     </div>
-</body>
+    
+  </div>
+</section>
+
+			
+			
+		
+
+		<!-- Scripts -->
+<script src="https://dwkiner.github.io/CAIUKiosk/js/jquery.min.js"></script>
+<script src="https://dwkiner.github.io/CAIUKiosk/js/jquery.scrollex.min.js"></script>
+<script src="https://dwkiner.github.io/CAIUKiosk/js/jquery.scrolly.min.js"></script>
+<script src="https://dwkiner.github.io/CAIUKiosk/js/skel.min.js"></script>
+<script src="https://dwkiner.github.io/CAIUKiosk/js/util.js"></script>
+
+<!-- [if lte IE 8 ]]> <script src="https://dwkiner.github.io/CAIUKiosk/js/ie/respond.min.js"></script><![endif] -->
+<script src="https://dwkiner.github.io/CAIUKiosk/js/main.js"></script>
+
+
+
+	</body>
 </html>

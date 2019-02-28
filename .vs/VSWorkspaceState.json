@@ -1,6 +1,10 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\CSS",
+    "\\Images",
+    "\\Scripts"
   ],
+  "SelectedNode": "\\Images\\helpbutton.png",
   "PreviewInSolutionExplorer": false
 }
