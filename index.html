@@ -7,71 +7,75 @@
 <html>
 <head>
     <title>CAIU KIOSK</title>
-<meta charset="utf-8" />
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<meta name="description" content=" Your Description ">
-<meta name="author" content=" Dalton Kiner ">
-<meta name="generator" content="Hugo 0.53" />
-<!-- [if lte IE 8 ]]> <script src="/js/ie/html5shiv.js"></script><![endif] -->
-<link rel="stylesheet" type="text/css" href="CSS/main.css" />
-<!--[if lte IE 8]><link rel="stylesheet" href="/css/ie8.css" /><![endif]-->
-<!--[if lte IE 8]><link rel="stylesheet" href="/css/ie9.css" /><![endif]-->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content=" Your Description ">
+    <meta name="author" content=" Dalton Kiner ">
+    <meta name="generator" content="Hugo 0.53" />
+    <!-- [if lte IE 8 ]]> <script src="/js/ie/html5shiv.js"></script><![endif] -->
+    <link rel="stylesheet" type="text/css" href="CSS/main.css" />
+    <link rel="stylesheet" type="text/css" href="/CSS/addtohomescreen.css">
+    <!--[if lte IE 8]><link rel="stylesheet" href="/css/ie8.css" /><![endif]-->
+    <!--[if lte IE 8]><link rel="stylesheet" href="/css/ie9.css" /><![endif]-->
 
 
     <script src="/js/webhook.js"></script>
 </head>
-	<body>
-		
-		<!-- header -->
-<section id="header">
-  <header class="major 1">
-    <h1> Welcome to the Helpdesk </h1>
-    <p> Tap below to Start </p>
-  </header>
-  <div class="container">
-    <ul class="actions">
-      
-        <li><a href="#infos" class="button special scrolly" onclick="Help()" style="display:inline-block;">Call for Help</a></li>
-        <li><a class="button special scrolly typeform-share button" href="https://daltonkiner.typeform.com/to/Ahux9D" data-mode="drawer_left" style="display:inline-block;text-decoration:none;background-color:#8CD1A8;color:white;cursor:pointer;" target="_blank">Submit a Ticket </a>
-        <script>(function () { var qs, js, q, s, d = document, gi = d.getElementById, ce = d.createElement, gt = d.getElementsByTagName, id = "typef_orm_share", b = "https://embed.typeform.com/"; if (!gi.call(d, id)) { js = ce.call(d, "script"); js.id = id; js.src = b + "embed.js"; q = gt.call(d, "script")[0]; q.parentNode.insertBefore(js, q) } })()</script></li>
-    </ul>
-  </div>
-</section>
+<body>
 
-		
-			
-			
-			
-				<!-- infos -->
-<section id="infos" class="main special">
-  <div class="container"id="hdresponse" style="display:none;">
-    
-    <div class="content">
-      <header class="major">
-        <h2>Someone Will Be with You Shortly!</h2>
-      </header>
-      <p>Our helpdesk hours are Monday through Friday, 7:30AM to 4:15PM. You may contact us via e-mail (helpdesk@caiu.org) or phone (717-732-8403) if you have any additional questions.</p>
-    </div>
-    
-  </div>
-</section>
+    <!-- header -->
+    <section id="header">
+        <header class="major 1">
+            <h1> Welcome to the Helpdesk </h1>
+            <p> Tap below to Start </p>
+        </header>
+        <div class="container">
+            <ul class="actions">
 
-			
-			
-		
-
-		<!-- Scripts -->
-<script src="https://caiukiosk.herokuapp.com/js/jquery.min.js"></script>
-<script src="https://caiukiosk.herokuapp.com/js/jquery.scrollex.min.js"></script>
-<script src="https://caiukiosk.herokuapp.com/js/jquery.scrolly.min.js"></script>
-<script src="https://caiukiosk.herokuapp.com/js/skel.min.js"></script>
-<script src="https://caiukiosk.herokuapp.com/js/util.js"></script>
-
-<!-- [if lte IE 8 ]]> <script src="https://caiukiosk.herokuapp.com/js/ie/respond.min.js"></script><![endif] -->
-<script src="https://caiukiosk.herokuapp.com/js/main.js"></script>
+                <li><a href="#infos" class="button special scrolly" onclick="Help()" style="display:inline-block;">Call for Help</a></li>
+                <li>
+                    <a class="button special scrolly typeform-share button" href="https://daltonkiner.typeform.com/to/Ahux9D" data-mode="drawer_left" style="display:inline-block;text-decoration:none;background-color:#8CD1A8;color:white;cursor:pointer;" target="_blank">Submit a Ticket </a>
+                    <script>(function () { var qs, js, q, s, d = document, gi = d.getElementById, ce = d.createElement, gt = d.getElementsByTagName, id = "typef_orm_share", b = "https://embed.typeform.com/"; if (!gi.call(d, id)) { js = ce.call(d, "script"); js.id = id; js.src = b + "embed.js"; q = gt.call(d, "script")[0]; q.parentNode.insertBefore(js, q) } })()</script>
+                </li>
+            </ul>
+        </div>
+    </section>
 
 
 
-	</body>
+
+
+    <!-- infos -->
+    <section id="infos" class="main special">
+        <div class="container" id="hdresponse" style="display:none;">
+
+            <div class="content">
+                <header class="major">
+                    <h2>Someone Will Be with You Shortly!</h2>
+                </header>
+                <p>Our helpdesk hours are Monday through Friday, 7:30AM to 4:15PM. You may contact us via e-mail (helpdesk@caiu.org) or phone (717-732-8403) if you have any additional questions.</p>
+            </div>
+
+        </div>
+    </section>
+
+
+
+
+
+    <!-- Scripts -->
+    <script src="/js/webhook.js"></script>
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/jquery.scrollex.min.js"></script>
+    <script src="/js/jquery.scrolly.min.js"></script>
+    <script src="/js/skel.min.js"></script>
+    <script src="/js/util.js"></script>
+    <script src="/js/addtohomescreen.js"></script>
+    <!-- [if lte IE 8 ]]> <script src="https://caiukiosk.herokuapp.com/js/ie/respond.min.js"></script><![endif] -->
+    <script src="/js/main.js"></script>
+
+
+
+</body>
 </html>
