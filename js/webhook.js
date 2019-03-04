@@ -19,5 +19,5 @@ function Help() {
     var data = JSON.stringify({ "value1": nameInput });
 
     xhr.send(data);
- 
+    setTimeout(function () { window.location.reload(false);}, 60000)
 }
