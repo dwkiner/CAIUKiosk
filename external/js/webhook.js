@@ -1,5 +1,6 @@
 function Help() {
    //document.getElementById("buttons").style.display = "none"
+    var roomName = localStorage.getItem("roomName");
     var nameInput = /*document.getElementById("nameIn").value*/"Someone";
     if (nameInput == "") {
         nameInput = "Someone"
@@ -15,7 +16,7 @@ function Help() {
     }
     $.ajax({
         data: 'payload=' + JSON.stringify({
-            "text": nameInput + " is calling for help!"
+            "text": nameInput + " is calling for help from the " + roomName + " room!"
         }),
         dataType: 'json',
         processData: false,

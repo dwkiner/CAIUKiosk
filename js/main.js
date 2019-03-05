@@ -126,26 +126,7 @@
 				}
 
 			// Scrollex.
-				skel.on('-small !small', function() {
-					$header.scrollex({
-						terminate: function() {
-
-							$headerTitle.css('opacity', '');
-
-						},
-						scroll: function(progress) {
-
-							// Fade out title as user scrolls down.
-								if (progress > 0.5)
-									x = 1 - progress;
-								else
-									x = progress;
-
-								$headerTitle.css('opacity', Math.max(0, Math.min(1, x * 2)));
-
-						}
-					});
-				});
+			
 
 				skel.on('+small', function() {
 

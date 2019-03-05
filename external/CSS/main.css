@@ -16,8 +16,7 @@
 		font-size: 100%;
 		font: inherit;
 		vertical-align: baseline;
-
-  
+       
 	}
 
 	article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
@@ -26,7 +25,7 @@
 
 body {
     line-height: 1;
-  
+    height: 100%;
 }
 
 	ol, ul {
@@ -49,6 +48,7 @@ body {
 
 	body {
 		-webkit-text-size-adjust: none;
+
 	}
 
 /* Box Model */
@@ -1334,7 +1334,7 @@ body {
 	}
 
 	html.is-touch {
-		height: 100vh;
+		height: 100%;
 		overflow: hidden;
 	}
 
@@ -1342,7 +1342,7 @@ body {
 			-webkit-backface-visibility: hidden;
 			-webkit-overflow-scrolling: touch;
 			-webkit-transform: translate3d(0, 0, 0);
-			height: 100vh;
+			height: 100%;
 			overflow: auto;
 		}
 
@@ -2655,7 +2655,7 @@ h1, h2, h3, h4, h5, h6 {
 		.main .goto-next {
 			-moz-transition: background-color 0.2s ease-in-out;
 			-webkit-transition: background-color 0.2s ease-in-out;
-			-ms-transition: background-color 0.2s ease-in-out;
+			
 			transition: background-color 0.2s ease-in-out;
 			background-color: rgba(144, 144, 144, 0.075);
 			background-image: url("images/arrow.svg");
@@ -2683,15 +2683,15 @@ h1, h2, h3, h4, h5, h6 {
 /* Header */
 
 	#header {
-		height: 100vh;
-		position: relative;
+		height: 100%;
+		position:relative;
 		text-align: center;
 	}
 
 		#header:after {
 			content: '';
 			display: inline-block;
-			height: 100vh;
+			height: 100%;
 			vertical-align: middle;
 		}
 
@@ -2936,6 +2936,7 @@ h1, h2, h3, h4, h5, h6 {
 
 			html, body {
 				min-width: 320px;
+                height:100%;
 			}
 
 		/* List */
