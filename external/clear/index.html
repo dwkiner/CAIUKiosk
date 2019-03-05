@@ -1,0 +1,14 @@
+<!doctype html>
+<html>
+<head>
+    <title>
+        Clearing Storage...
+    </title>
+    <script>
+        localStorage.clear();
+        if (localStorage.getItem("roomName") == null) {
+            window.location = "/external/index.html";
+        }
+    </script>
+</head>
+</html>
