@@ -2691,7 +2691,7 @@ h1, h2, h3, h4, h5, h6 {
 		#header:after {
 			content: '';
 			display: inline-block;
-			height: 100vh;
+			height: 100%;
 			vertical-align: middle;
 		}
 
@@ -2822,13 +2822,14 @@ h1, h2, h3, h4, h5, h6 {
 
 			.main-bg {
 				display: none;
+
 			}
 
 		/* Main */
 
 			.main .image.primary {
 				display: block;
-				height: 100%;
+				
 			}
 
 			.main .container {

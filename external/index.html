@@ -8,31 +8,17 @@
 <head>
 
     <title>CAIU KIOSK</title>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="viewport" content="height=device-height, initial-scale=1" />
-    <meta name="description" content=" CAIU Kiosk for Helpdesk ">
     <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="author" content=" Dalton Kiner ">
-    <meta name="generator" content="Hugo 0.53" />
+
     <!-- [if lte IE 8 ]]> <script src="/js/ie/html5shiv.js"></script><![endif] -->
     <link rel="stylesheet" type="text/css" href="CSS/main.css" />
 
     <!--[if lte IE 8]><link rel="stylesheet" href="/css/ie8.css" /><![endif]-->
     <!--[if lte IE 8]><link rel="stylesheet" href="/css/ie9.css" /><![endif]-->
-    <script>
-        var roomName = localStorage.getItem("roomName");
-        var nameSet = "";
-        if (roomName == null) {
-            nameSet = prompt("What room is the iPad in?");
-            localStorage.setItem("roomName", nameSet);
-        }
-        else {
-        }
-
-
-    </script>
+    
 
 </head>
 
@@ -41,16 +27,16 @@
     <!-- header -->
     <section id="header">
         <header class="major 1" style="margin-top:25%;">
-            <span >
+            <span>
                 <h1 style="text-shadow: 0px 0px 10px #363738;"> Need help? </h1>
                 <p> Tap below to Start </p>
             </span>
         </header>
-        <div class="container" >
+        <div class="container">
             <ul class="actions" id="buttons">
 
                 <li><a href="#infos" class="button special scrolly" onclick="Help()" style="display:inline-block; ">Call the Helpdesk</a></li>
-                
+
             </ul>
         </div>
     </section>
@@ -61,7 +47,7 @@
 
     <!-- infos -->
     <section id="infos" class="main special">
-        <div class="container" id="hdresponse" style="display:none;">
+        <div class="container" id="hdresponse" style="display:block;">
 
             <div class="content">
                 <header class="major">
@@ -78,6 +64,18 @@
 
 
     <!-- Scripts -->
+    <script>
+        var roomName = localStorage.getItem("roomName");
+        var nameSet = "";
+        if (roomName == null) {
+            nameSet = prompt("What room is the iPad in?");
+            localStorage.setItem("roomName", nameSet);
+        }
+        else {
+        }
+
+
+    </script>
     <script src="/external/js/webhook.js"></script>
     <script src="/js/jquery.min.js"></script>
     <script src="/js/jquery.scrollex.min.js"></script>
