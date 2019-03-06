@@ -8,12 +8,12 @@ function Help() {
     var content = document.getElementById("hdresponse");
     var contentSetting = content.style.display;
     var xhr = new XMLHttpRequest();
-    if (contentSetting == "none") {
+   /* if (contentSetting == "none") {
         content.style.display = "block";
     }
     else {
         content.style.display = "block"
-    }
+    }*/
     $.ajax({
         data: 'payload=' + JSON.stringify({
             "text": nameInput + " is calling for help from the " + roomName + " room!"
