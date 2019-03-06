@@ -14,10 +14,10 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
 
     <!-- [if lte IE 8 ]]> <script src="/js/ie/html5shiv.js"></script><![endif] -->
-    <link rel="stylesheet" type="text/css" href="CSS/main.css" />
+    <link rel="stylesheet" type="text/css" href="/CSS/main.css" />
 
-    <!--[if lte IE 8]><link rel="stylesheet" href="/css/ie8.css" /><![endif]-->
-    <!--[if lte IE 8]><link rel="stylesheet" href="/css/ie9.css" /><![endif]-->
+    <!--[if lte IE 8]><link rel="stylesheet" href="/CSS/ie8.css" /><![endif]-->
+    <!--[if lte IE 8]><link rel="stylesheet" href="/CSS/ie9.css" /><![endif]-->
     
 
 </head>
@@ -26,13 +26,13 @@
 
     <!-- header -->
     <section id="header">
-        <header class="major 1" style="margin-top:25%;">
+        <header class="major 1" style="margin-top:25%; margin-bottom: 25%;">
             <span>
                 <h1 style="text-shadow: 0px 0px 10px #363738;"> Need help? </h1>
                 <p> Tap below to Start </p>
             </span>
         </header>
-        <div class="container">
+        <div class="container" id="hdresponse1" style="display:block;">
             <ul class="actions" id="buttons">
 
                 <li><a href="#infos" class="button special scrolly" onclick="Help()" style="display:inline-block; ">Call the Helpdesk</a></li>
@@ -47,7 +47,7 @@
 
     <!-- infos -->
     <section id="infos" class="main special">
-        <div class="container" id="hdresponse" style="display:block;">
+        <div class="container" id="hdresponse" style="display:none;">
 
             <div class="content">
                 <header class="major">
