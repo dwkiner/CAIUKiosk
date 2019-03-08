@@ -1,0 +1,43 @@
+<!doctype HTML>
+<html>
+<head>
+    <title>Clearing Storage...</title>
+
+</head>
+<body>
+  
+    <script>
+      
+       finish();
+        function clear() {
+            localStorage.clear();
+            return localStorage.getItem("roomName");
+        };
+        /*function noAsync() {
+            var roomName = clear();
+            var done = new Boolean(false);
+            console.log(roomName);
+            if (roomName == null) {
+                done = true;
+            }
+            if (done == true) {
+                alert("Local Storage Cleared, redirecting...")
+                window.location = "../index.html"
+            }
+        };*/
+             function finish() {
+                var roomName =  clear();
+                var done = new Boolean(false);
+                console.log(roomName);
+                if (roomName == null) {
+                    done = true;
+                }
+                if (done == true) {
+                    alert("Local Storage Cleared, redirecting...")
+                    window.location = "../index.html"
+                }
+            };
+
+    </script>
+</body>
+</html>
