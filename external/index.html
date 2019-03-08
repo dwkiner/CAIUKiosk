@@ -68,16 +68,19 @@
         var roomName = localStorage.getItem("roomName");
         var nameSet = "";
         function askRoom() {
-            if (roomName === "null") {
-                nameSet = prompt("What room is the iPad in?");
-                localStorage.setItem("roomName", nameSet);
-            }
+
+            nameSet = prompt("What room is the iPad in?");
+            localStorage.setItem("roomName", nameSet);
+        };
+        if (roomName === null) {
+            askRoom();
+        }
             else {
                 console.log(roomName);
             }
-        };
+        
 
-        askRoom();
+       
     </script>
     <script src="/external/js/webhook.js"></script>
     <script src="/js/jquery.min.js"></script>
