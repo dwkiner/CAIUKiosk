@@ -1,13 +1,13 @@
 ﻿<!DOCTYPE HTML>
 <!--
-	Highlights by HTML5 UP
-	html5up.net | @n33co
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+    Highlights by HTML5 UP
+    html5up.net | @n33co
+    Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
 <html>
 <head>
 
-    <title>CAIU KIOSK</title>
+    <title>CAIU KIOSK- SUBMIT A TICKET</title>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -26,36 +26,20 @@
 
 <body>
 
-    <!-- header -->
-    <section id="header">
-        <header class="major 1">
-            <h1 style=" text-shadow: 0px 0px 10px #363738;"> Welcome to the Helpdesk </h1>
-            <p> Tap below to Start </p>
-        </header>
-        <div class="container" >
-            <ul class="actions" id="buttons">
-
-                <li><a href="#infos" class="button special scrolly" onclick="Help()" style="display:inline-block;">Call for Help</a></li>
-                <li>
-                    <a class="button special scrolly " href="Ticket.html"  style="display:inline-block;">Submit a Ticket </a>
-                </li>
-            </ul>
-        </div>
-    </section>
-
-
-
-
-
     <!-- infos -->
     <section id="infos" class="main special">
-        <div class="container" id="hdresponse" style="display:none;">
+        <div class="container" id="hdresponse" style="">
 
             <div class="content">
-                <header class="major">
-                    <h2>Someone Will Be with You Shortly!</h2>
-                </header>
-                <p>Our helpdesk hours are Monday through Friday, 7:30AM to 4:15PM. You may contact us via e-mail (helpdesk@caiu.org) or phone (717-732-8403) if you have any additional questions.</p>
+                <form method="post" action="Ticket.php">
+                    <label for="email">Email:</label>
+                    <input type="text" name="email" id="email">
+                    <label for="Subject">Subject:</label>
+                    <input type="text" name="subject" id="emailsubject">
+                    <label for="body">Describe your Issue:</label>
+                    <input type="text" name="body" id="emailbody" />
+                    <input type="submit" name="send" value="Submit">
+                </form>
             </div>
 
         </div>
