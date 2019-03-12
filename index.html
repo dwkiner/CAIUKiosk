@@ -32,12 +32,12 @@
             <h1 style=" text-shadow: 0px 0px 10px #363738;"> Welcome to the Helpdesk </h1>
             <p> Tap below to Start </p>
         </header>
-        <div class="container" >
+        <div class="container">
             <ul class="actions" id="buttons">
 
                 <li><a href="#infos" class="button special scrolly" onclick="Help()" style="display:inline-block;">Call for Help</a></li>
                 <li>
-                    <a class="button special scrolly " href="Ticket.html"  style="display:inline-block;">Submit a Ticket </a>
+                    <a class="button special scrolly " onclick="window.location = 'Ticket.html';" style="display:inline-block;">Submit a Ticket </a>
                 </li>
             </ul>
         </div>
@@ -67,12 +67,19 @@
 
     <!-- Scripts -->
     <script src="/js/webhook.js"></script>
+    <script src="/js/jquery.stayInWebApp.min.js"></script>
     <script src="/js/jquery.min.js"></script>
     <script src="/js/jquery.scrollex.min.js"></script>
     <script src="/js/jquery.scrolly.min.js"></script>
     <script src="/js/skel.min.js"></script>
     <script src="/js/util.js"></script>
-
+    <script>
+    
+        $(function () {
+            $.stayInWebApp();
+        });
+        
+    </script>
     <!-- [if lte IE 8 ]]> <script src="/js/ie/respond.min.js"></script><![endif] -->
     <script src="/js/main.js"></script>
 

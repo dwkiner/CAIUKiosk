@@ -25,9 +25,9 @@
 </head>
 
 <body>
-
+    <a onclick="window.location = 'index.html';" class="button special scrolly"  style="display:inline-block;"> Go back</a>
     <!-- infos -->
-    <section id="infos" class="main special">
+    <section id="infos" class="main special" style="margin-top:30%;">
         <div class="container" id="hdresponse" style="">
 
             <div class="content">
@@ -37,7 +37,7 @@
                     <label for="Subject">Subject:</label>
                     <input type="text" name="subject" id="emailsubject">
                     <label for="body">Describe your Issue:</label>
-                    <input type="text" name="body" id="emailbody" />
+                    <textarea name="body" id="emailbody"></textarea>
                     <input type="submit" name="send" value="Submit">
                 </form>
             </div>
@@ -51,12 +51,19 @@
 
     <!-- Scripts -->
     <script src="/js/webhook.js"></script>
+    <script src="/js/jquery.stayInWebApp.min.js"></script>
     <script src="/js/jquery.min.js"></script>
     <script src="/js/jquery.scrollex.min.js"></script>
     <script src="/js/jquery.scrolly.min.js"></script>
     <script src="/js/skel.min.js"></script>
     <script src="/js/util.js"></script>
+    <script>
+       
+        $(function () {
+            $.stayInWebApp();
+        });
 
+    </script>
     <!-- [if lte IE 8 ]]> <script src="/js/ie/respond.min.js"></script><![endif] -->
     <script src="/js/main.js"></script>
 

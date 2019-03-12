@@ -23,7 +23,7 @@
 </head>
 
 <body>
-   
+
     <!-- header -->
     <section id="header">
         <header class="major 1" style="margin-top:25%; margin-bottom: 25%;">
@@ -75,20 +75,27 @@
         if (roomName === null) {
             askRoom();
         }
-            else {
-                console.log(roomName);
-            }
-        
+        else {
+            console.log(roomName);
+        }
 
-       
+
+
     </script>
-    <script src="/external/js/webhook.js"></script>
+    <script src="/js/webhook.js"></script>
+    <script src="/js/jquery.stayInWebApp.min.js"></script>
     <script src="/js/jquery.min.js"></script>
     <script src="/js/jquery.scrollex.min.js"></script>
     <script src="/js/jquery.scrolly.min.js"></script>
     <script src="/js/skel.min.js"></script>
     <script src="/js/util.js"></script>
+    <script>
+        
+        $(function () {
+            $.stayInWebApp();
+        });
 
+    </script>
     <!-- [if lte IE 8 ]]> <script src="/js/ie/respond.min.js"></script><![endif] -->
     <script src="/js/main.js"></script>
 

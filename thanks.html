@@ -1,4 +1,4 @@
-<!DOCTYPE HTML>
+﻿<!DOCTYPE HTML>
 <!--
     Highlights by HTML5 UP
     html5up.net | @n33co
@@ -30,13 +30,13 @@
     <section id="header">
         <header class="major 1">
             <h1 style=" text-shadow: 0px 0px 10px #363738;"> Your Ticket Has Been Submitted </h1>
-           
+
         </header>
         <div class="container">
             <ul class="actions" id="buttons">
 
-                <li><a href="index.html" class="button special scrolly"  style="display:inline-block;" id="redirecting"></a></li>
-                
+                <li><a href="index.html" class="button special scrolly" style="display:inline-block;" id="redirecting"></a></li>
+
             </ul>
         </div>
     </section>
@@ -48,14 +48,19 @@
 
 
     <!-- Scripts -->
+
     <script src="/js/webhook.js"></script>
+    <script src="/js/jquery.stayInWebApp.min.js"></script>
     <script src="/js/jquery.min.js"></script>
     <script src="/js/jquery.scrollex.min.js"></script>
     <script src="/js/jquery.scrolly.min.js"></script>
     <script src="/js/skel.min.js"></script>
     <script src="/js/util.js"></script>
     <script>
-        var Secs = 10
+            var Secs = 10
+        $(function () {
+            $.stayInWebApp();
+        });
         setInterval(function () {
             document.getElementById("redirecting").innerHTML = "Redirecting in " + Secs + "...";
             Secs = Secs - 1;
