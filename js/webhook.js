@@ -20,7 +20,7 @@ function Help() {
         dataType: 'json',
         processData: false,
         type: 'POST',
-        url: "https://hooks.slack.com/services/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"
+        url: "https://hooks.slack.com/services/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"
 
     });
     
