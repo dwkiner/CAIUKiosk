@@ -15,7 +15,7 @@ function Help() {
     }
     $.ajax({
         data: 'payload=' + JSON.stringify({
-            "text": nameInput + " is calling for help!"
+            "text": nameInput + " is calling for help! <!channel>"
         }),
         dataType: 'json',
         processData: false,

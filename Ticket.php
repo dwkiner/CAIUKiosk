@@ -10,14 +10,16 @@ require 'vendor/autoload.php';
 $mail = new PHPMailer(true);                              // Passing `true` enables exceptions
 try {
     //Server settings
-    $mail->SMTPDebug = 2;                                 // Enable verbose debug output
+    
     $mail->isSMTP();                                      // Set mailer to use SMTP
-    $mail->Host = 'mail.caiu.org';  // Specify main and backup SMTP servers
-    $mail->SMTPAuth = false;                               // Enable SMTP authentication
-    $mail->Port = 25;                                    // TCP port to connect to
-
+    $mail->Host = 'smtp.office365.com';  // Specify main and backup SMTP servers
+    $mail->SMTPAuth   = true;                                   // Enable SMTP authentication
+    $mail->Username   = 'ipadkiosk@caiu.org';                     // SMTP username
+    $mail->Password   = 'Lb5g4S7Afd';                               // SMTP password
+    $mail->SMTPSecure = 'tls';                                  // Enable TLS encryption, `ssl` also accepted
+    $mail->Port       = 587;                                    // TCP port to connect to
     //Recipients
-    $mail->setFrom($_POST['email'], 'Mailer');
+    $mail->setFrom('ipadkiosk@caiu.org', 'Ipad Kiosk');
     $mail->addAddress('helpdesk@caiu.org');               // Name is optional
     //$mail->addCC('techintern1@caiu.org'); //for testing
 
@@ -25,7 +27,7 @@ try {
     //Content
     $mail->isHTML(true);                                  // Set email format to HTML
     $mail->Subject = $_POST['subject'];
-    $mail->Body    = $_POST['body'];
+    $mail->Body    = nl2br("#requester "  .$_POST['email'] ." \r\n #group 21012644 \r\n " ._POST[`body`]);
     
 
     $mail->send();
