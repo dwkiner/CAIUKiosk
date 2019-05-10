@@ -5,6 +5,7 @@
     Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
 <html>
+
 <head>
 
     <title>CAIU KIOSK- SUBMIT A TICKET</title>
@@ -25,21 +26,21 @@
 </head>
 
 <body>
-    <a onclick="window.location = 'index.html';" class="button special scrolly"  style="display:inline-block;"> Go back</a>
+    <a onclick="window.location = 'index.html';" class="button special scrolly" style="display:inline-block;"> Go back</a>
     <!-- infos -->
-    <section id="infos" class="main special" style="margin-top:30%;">
-        <div class="container" id="hdresponse" style="">
+    <section id="infos" class="main special">
+        <div class="container" id="hdresponse" style="top: 0%">
 
             <div class="content">
-                <form method="post" action="Ticket.php">
-                    <label for="email">Email:</label>
-                    <input type="text" name="email" id="email">
-                    <label for="Subject">Subject:</label>
-                    <input type="text" name="subject" id="emailsubject">
-                    <label for="body">Describe your Issue:</label>
-                    <textarea name="body" id="emailbody"></textarea>
-                    <input type="submit" name="send" value="Submit">
-                </form>
+
+                <label for="email">Email:</label>
+                <input type="text" name="email" id="email">
+                <label for="Subject">Subject:</label>
+                <input type="text" name="subject" id="emailsubject">
+                <label for="body">Describe your Issue:</label>
+                <textarea name="body" id="emailbody"></textarea>
+                <input type="submit" name="send" onclick="TicketSub();">
+
             </div>
 
         </div>
@@ -56,13 +57,12 @@
     <script src="/js/jquery.scrollex.min.js"></script>
     <script src="/js/jquery.scrolly.min.js"></script>
     <script src="/js/skel.min.js"></script>
-    <script src="/js/util.js"></script>
+    <script src="/js/util.min.js"></script>
+    <script src="/js/Ticket.js"></script>
     <script>
-       
-        $(function () {
+        $(function() {
             $.stayInWebApp();
         });
-
     </script>
     <!-- [if lte IE 8 ]]> <script src="/js/ie/respond.min.js"></script><![endif] -->
     <script src="/js/main.js"></script>
@@ -70,4 +70,5 @@
 
 
 </body>
+
 </html>
