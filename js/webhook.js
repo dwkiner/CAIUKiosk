@@ -10,7 +10,7 @@ function Help() {
     } else {
         x.style.display = "none";
     }*/
-    //https://maker.ifttt.com/trigger/callHelp/with/key/ZB_WQg5fBbfqAIZAZIxdE3cA8JGkS04XwBoC0ya97d
+
     xhr.open("GET", "INSERT WEBHOOK SITE HERE FOR SLACK", true);
    /* xhr.setRequestHeader("Content-type", "application/json");
     var data = JSON.stringify({ "value1": nameInput });
